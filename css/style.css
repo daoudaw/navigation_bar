@@ -1,0 +1,115 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: rgba(0, 0, 0, 0.829);
+    color: white;
+    font-family: poppins;
+    letter-spacing: 1px;
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+nav > .logo
+{
+    margin-right: 30px;
+    font-size: 40px;
+    color: white;
+
+}
+
+ul
+{
+    display: flex; 
+    margin-top: 10px;
+}
+
+ul  li
+{
+    list-style-type: none;
+    margin-left: 45px;
+}
+
+ul  li  a
+{
+    color: white;
+    text-transform: uppercase;
+}
+
+ul  li  a:hover
+{
+    text-decoration: none;
+    color: wheat;
+}
+
+
+.burger
+{
+    height: 5vh;
+    cursor: pointer;
+    display: none;
+}
+
+.burger > div
+{
+    border: solid white 1px;
+    width: 35px;
+    margin: 10px; 
+    transition: 0.4s linear;
+}
+
+
+
+
+@media screen and (max-width : 600px)
+{
+
+    ul
+    {
+        display: flex;
+        flex-direction: column;
+        height: 25vh;
+        justify-content: space-between;
+        position: absolute;
+        left: -35px;
+        top: 12vh;
+        transform: translateX(-100%);
+        transition: 0.4s ease-in-out;
+    }
+
+    .burger
+    {
+        display: block;
+    }
+
+    .nav-active
+    {
+        transform: translateX(0);
+    }
+
+     .toggle .line1
+    {
+        transform: rotate(45deg) translate(6px, 11px);
+    }
+
+     .toggle .line2
+    {
+        opacity: 0;
+    }
+
+     .toggle .line3
+    {
+        transform: rotate(-45deg) translate(6px, -11px);
+    }
+
+}
